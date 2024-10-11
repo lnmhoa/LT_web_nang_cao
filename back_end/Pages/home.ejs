@@ -23,12 +23,15 @@
                   <%= data.row[i].address %>
               </td>
               <td>
-                <i class="fa-regular fa-eye" style="color: #74C0FC; cursor: pointer;margin: 0 5px;"></i>
-                <i class="fa-regular fa-pen-to-square" style="color: #74C0FC; cursor: pointer;margin: 0 5px;"></i>
+                <a href="/detail-user/<%= data.row[i].id %>">
+                  <i class="fa-regular fa-eye" style="color: #74C0FC; cursor: pointer;margin: 0 5px;"></i></a>
+                <a href="/edit-user/<%= data.row[i].id %>">
+                  <i class="fa-regular fa-pen-to-square" style="color: #74C0FC; cursor: pointer;margin: 0 5px;"></i></a>
                 <i class="fa-solid fa-trash-can" style="color: #f60909; cursor: pointer;margin: 0 5px;"></i>
+                
               </td>
             </tr>   
         <% }%>
     </tbody>
   </table>
-  <a href="http://localhost:3000/addUser" class="btn btn-primary btn-lg" tabindex="-1" role="button">Thêm người dùng</a>
+  <a href="addUser" class="btn btn-primary btn-lg" tabindex="-1" role="button">Thêm người dùng</a>

@@ -8,6 +8,7 @@ const getAllUser = async () => {
 const createUser = async (userData) => {
     const { username, password, fullname, address, sex, email } = userData;
     const [result] = await pool.execute(
+        
         'INSERT INTO user (username, password, fullname, address, sex, email) VALUES (?, ?, ?, ?, ?, ?)',
         [username, password, fullname, address, sex, email]
     );
