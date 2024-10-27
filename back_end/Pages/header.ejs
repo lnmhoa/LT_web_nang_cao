@@ -15,6 +15,19 @@
       <li class="nav-item">
         <a class="nav-link" href="/contact">Contact</a>
       </li>
+      <% if (data.sessionData) { %>
+        <li class="nav-item">
+          <p class="nav-link"><%= data.sessionData.fullname %></p
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/log-out">Đăng xuất</a>
+        </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/sign-in">Đăng nhập</a>
+          </li>
+        <% }%>
     </ul>
   </div>
 </nav>
